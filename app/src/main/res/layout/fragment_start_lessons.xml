@@ -76,7 +76,8 @@
 
     <Button
         android:id="@+id/when_start_button"
-        android:text="20XX年X月X日"
+        android:hint="20XX年X月X日"
+        android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
