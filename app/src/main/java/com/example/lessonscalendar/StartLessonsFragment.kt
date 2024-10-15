@@ -42,28 +42,29 @@ class StartLessonsFragment : Fragment() {
 
         binding.startLessonButton.setOnClickListener {
             // りくとさんから習った空文字判定をしないといけない。
-            binding.lessonsEditText.setOnClickListener {
-                if (binding.lessonsEditText.text.toString() == "") {
-                    EnterLessonDialog.Builder(this)
-                        .setTitle("別の名前を選択してください。")
-                        .setMessage("フォルダ名は空白にできません。")
-                        .setPositiveButton("OK")
-                        .build()
-                        .show(childFragmentManager, EnterLessonDialog::class.simpleName)
-                } else {
-                    val mainActivity = activity as MainActivity?
-                    if (mainActivity != null) {
+            if (binding.lessonsEditText.text.toString() == "") {
 
-                        lifecycleScope.launch(Dispatchers.IO) {
-                            withContext(Dispatchers.Default) {
-                                mainActivity.userDao.insertUser(
-                                    UserEntity(whatToLearn = binding.lessonsEditText.text.toString())
-                                )
-                            }
+                EnterLessonDialog.Builder(this)
+                    .setTitle("項目欄を全て入力してください。")
+                    .setMessage("項目欄は空白にできません。")
+                    .setPositiveButton("OK")
+                    .build()
+                    .show(childFragmentManager, EnterLessonDialog::class.simpleName)
+
+            } else {
+
+                val mainActivity = activity as MainActivity?
+                if (mainActivity != null) {
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        withContext(Dispatchers.Default) {
+                            mainActivity.userDao.insertUser(
+                                UserEntity(whatToLearn = binding.lessonsEditText.text.toString())
+                            )
                         }
                     }
-                    navController.navigate(R.id.action_startLessonsFragment_to_homeFragment)
                 }
+
+                navController.navigate(R.id.action_startLessonsFragment_to_homeFragment)
             }
         }
     }
