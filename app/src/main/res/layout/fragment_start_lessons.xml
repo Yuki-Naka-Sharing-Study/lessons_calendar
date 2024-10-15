@@ -107,6 +107,17 @@
         android:layout_marginStart="16dp"
         />
 
+    <TextView
+        android:id="@+id/monthly_cost_yen_text_view"
+        android:text="円"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/monthly_cost_edit_text"
+        app:layout_constraintLeft_toRightOf="@+id/monthly_cost_edit_text"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        />
+
     <Button
         android:id="@+id/start_lesson_button"
         android:text="習い事を開始する"
