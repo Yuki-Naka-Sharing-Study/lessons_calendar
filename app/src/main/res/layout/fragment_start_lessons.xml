@@ -98,7 +98,7 @@
 
     <EditText
         android:id="@+id/monthly_cost_edit_text"
-        android:hint="20XX年X月X日"
+        android:hint="10000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/monthly_cost_text_view"
