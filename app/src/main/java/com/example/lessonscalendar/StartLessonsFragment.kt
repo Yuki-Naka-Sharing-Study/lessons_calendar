@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.lessonscalendar.databinding.FragmentStartLessonsBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class StartLessonsFragment : Fragment() {
 
@@ -29,7 +33,7 @@ class StartLessonsFragment : Fragment() {
         binding.backToFragmentHomeView.setOnClickListener {
             navController.navigate(R.id.action_startLessonsFragment_to_homeFragment)
         }
-
+        
         binding.startLessonButton.setOnClickListener {
             navController.navigate(R.id.action_startLessonsFragment_to_homeFragment)
         }
