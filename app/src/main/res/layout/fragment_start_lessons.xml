@@ -5,7 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartLessonsFragment">
+    tools:context=".StartLessonsFragment"
+    >
 
     <View
         android:id="@+id/back_to_fragment_home_view"
