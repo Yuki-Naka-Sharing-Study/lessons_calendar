@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lessonscalendar.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_startLessonsFragment"
+            app:destination="@id/startLessonsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recordLessonsFragment"
+            app:destination="@id/recordLessonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordLessonsFragment"
+        android:name="com.example.lessonscalendar.RecordLessonsFragment"
+        android:label="fragment_record_lessons"
+        tools:layout="@layout/fragment_record_lessons" />
+    <fragment
+        android:id="@+id/startLessonsFragment"
+        android:name="com.example.lessonscalendar.StartLessonsFragment"
+        android:label="fragment_start_lessons"
+        tools:layout="@layout/fragment_start_lessons" />
+</navigation>
