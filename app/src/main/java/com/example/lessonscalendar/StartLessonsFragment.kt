@@ -49,11 +49,7 @@ class StartLessonsFragment : Fragment() {
         binding.startLessonButton.setOnClickListener {
             // りくとさんから習った空文字判定をしないといけない。
 
-            // 以下のコードは上手くいかない。
-//            if (binding.lessonsEditText.text.toString() == "" && binding.monthlyCostEditText.toString() == "") {
-
-            // 以下のコードは上手くいく
-            if (binding.lessonsEditText.text.toString() == "") {
+            if (binding.lessonsEditText.text.toString() == "" || binding.monthlyCostEditText.text.toString() == "") {
 
                 EnterLessonDialog.Builder(this)
                     .setTitle("項目欄を全て入力してください。")
