@@ -1,5 +1,6 @@
 package com.example.lessonscalendar
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import com.example.lessonscalendar.databinding.FragmentStartLessonsBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.Calendar
 
 class StartLessonsFragment : Fragment() {
 
@@ -38,6 +40,10 @@ class StartLessonsFragment : Fragment() {
 
         binding.backToFragmentHomeView.setOnClickListener {
             navController.navigate(R.id.action_startLessonsFragment_to_homeFragment)
+        }
+
+        binding.whenStartButton.setOnClickListener {
+            showDatePickerDialog()
         }
 
         binding.startLessonButton.setOnClickListener {
@@ -67,5 +73,17 @@ class StartLessonsFragment : Fragment() {
                 navController.navigate(R.id.action_startLessonsFragment_to_homeFragment)
             }
         }
+    }
+
+    private fun showDatePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
+            val selectedDate = "$selectedYear-${selectedMonth + 1}-$selectedDay"
+            binding.whenStartButton.text = selectedDate
+        }, year, month, day).show()
     }
 }

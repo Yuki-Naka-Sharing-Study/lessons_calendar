@@ -72,14 +72,15 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         />
-    
-    <EditText
-        android:id="@+id/when_start_edit_text"
-        android:hint="20XX年X月X日"
+
+    <Button
+        android:id="@+id/when_start_button"
+        android:text="20XX年X月X日"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/when_start_text_view"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/when_start_text_view"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         />
@@ -89,7 +90,7 @@
         android:text="習い事の月額費用"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/when_start_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/when_start_button"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
