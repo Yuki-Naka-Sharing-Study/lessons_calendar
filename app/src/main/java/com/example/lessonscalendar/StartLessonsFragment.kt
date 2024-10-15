@@ -21,12 +21,16 @@ class StartLessonsFragment : Fragment() {
         return binding.root
     }
 
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val navController = findNavController()
 
         binding.backToFragmentHomeView.setOnClickListener {
+            navController.navigate(R.id.action_startLessonsFragment_to_homeFragment)
+        }
+
+        binding.startLessonButton.setOnClickListener {
             navController.navigate(R.id.action_startLessonsFragment_to_homeFragment)
         }
     }
