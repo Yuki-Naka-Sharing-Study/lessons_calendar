@@ -36,7 +36,6 @@ class RecordLessonsFragment : Fragment() {
             }
         })
 
-
         return binding.root
     }
 
@@ -48,5 +47,10 @@ class RecordLessonsFragment : Fragment() {
         binding.backToFragmentHomeView.setOnClickListener {
             navController.navigate(R.id.action_recordLessonsFragment_to_homeFragment)
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
