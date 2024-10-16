@@ -9,18 +9,18 @@ class UserViewModel(
 ): ViewModel() {
     val users: LiveData<List<UserEntity>>
             = repo.getUsers().asLiveData()
-    val WhatToLearn: LiveData<List<UserEntity>>
+    val whatToLearn: LiveData<List<UserEntity>>
             = repo.getWhatToLearn().asLiveData()
-    val WhenToStart: LiveData<List<UserEntity>>
+    val whenToStart: LiveData<List<UserEntity>>
             = repo.getWhenToStart().asLiveData()
-    val MonthlyCostOfLessons: LiveData<List<UserEntity>>
+    val monthlyCostOfLessons: LiveData<List<UserEntity>>
             = repo.getMonthlyCostOfLessons().asLiveData()
-    val XDay: LiveData<List<UserEntity>>
+    val xDay: LiveData<List<UserEntity>>
             = repo.getXDay().asLiveData()
-    val XMonth: LiveData<List<UserEntity>>
+    val xMonth: LiveData<List<UserEntity>>
             = repo.getXMonth().asLiveData()
-    val XYear: LiveData<List<UserEntity>>
+    val xYear: LiveData<List<UserEntity>>
             = repo.getXYear().asLiveData()
-    val XYen: LiveData<List<UserEntity>>
+    val xYen: LiveData<List<UserEntity>>
             = repo.getXYen().asLiveData()
 }
