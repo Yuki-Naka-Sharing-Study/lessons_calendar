@@ -33,6 +33,7 @@
         android:id="@+id/back_to_main_fragment_text_view"
         android:text="戻る"
         android:textSize="16sp"
+        android:textColor="@color/blue_or_light_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/back_to_fragment_home_image_button"
